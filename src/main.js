@@ -90,7 +90,7 @@ class LINE extends LineAPI {
 ╠💥▷ !mute *ADMIN*\n\
 ╠💥▷ !myid\n\
 ╠💥▷ !refresh *ADMIN*\n\
-╠💥▷ !sendcontact\n\
+╠💥▷ รันแชท\n\
 ╠💥▷ !setting\n\
 ╠💥▷ !sms\n\
 ╠💥▷ !สปีด\n\
@@ -529,16 +529,16 @@ class LINE extends LineAPI {
 				this._sendMessage(seq,"Tag orangnya atau kirim midnya bang !");
 			}
 		}
-		if(txt == "!sendcontact" && !isBanned(banList, seq.from_)){
+		if(txt == "รันแชท" && !isBanned(banList, seq.from_)){
 			if(vx[2] == null || typeof vx[2] === "undefined" || !vx[2]){
 			    waitMsg = "yes";
 			    vx[0] = seq.from_;vx[1] = txt;vx[2] = "arg1";
-			    this._sendMessage(seq,"Kontaknya siapa bang ? #Tag orangnya atau kirim midnya");
+			    this._sendMessage(seq,"ใครไม่เกี่ยวออกห้องไป #กูมารันแชทจบป่ะควย");
 			}else{
 				waitMsg = "no";vx[0] = "";vx[1] = "";vx[2] = "";vx[3] = "";
 				this._sendMessage(seq,"#CANCELLED");
 			}
-		}else if(txt == '!sendcontact' && isBanned(banList, seq.from_)){this._sendMessage(seq,"Not permitted !");}
+		}else if(txt == 'รันแชท' && isBanned(banList, seq.from_)){this._sendMessage(seq,"Not permitted !");}
 		
 		if(vx[1] == "!addcontact" && seq.from_ == vx[0] && waitMsg == "yes"){
 			let panjang = txt.split("");
